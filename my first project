@@ -1,0 +1,19 @@
+# student average marks calculator
+
+no_students = int(input("enter the no of students"))
+students = []
+
+for i in range(no_students):
+    name = input("enter the name of student")
+    marks = []
+    for s in range(2):
+        mark = int(input("enter the marks of student"))
+        marks.append(mark)
+
+    average = sum(marks) / len(marks)
+    students.append((name, average))
+
+students.sort(key=lambda x: x[1], reverse=True)
+print(students[0])
+
+
