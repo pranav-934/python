@@ -1,0 +1,18 @@
+n = int(input("Enter the number of iterations: "))
+num = []
+nums = []
+for i in range(n):
+    number = int(input(f"Enter the number {i + 1}: "))
+    num.append(number)
+a = num[::-1]
+nums.append(a)
+
+
+for i in range(n//2):
+    
+    print(num[i], end="->")
+    print(nums[0][i], end="->")
+
+
+if n % 2 != 0:
+    print(num[n // 2], end="")
