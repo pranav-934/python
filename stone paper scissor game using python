@@ -1,0 +1,28 @@
+import random
+
+def user_input():
+    user_choice = input("Enter stone, paper, or scissor: ")
+    while user_choice not in ['stone', 'paper', 'scissor']:
+        print("Invalid choice")
+        user_choice = input("Enter stone, paper, or scissor: ")
+    return user_choice
+
+def computer_choice():
+    return random.choice(['stone', 'scissor', 'paper'])
+
+user = user_input()
+computer = computer_choice()
+
+print(f"You chose: {user}")
+print(f"Computer chose: {computer}")
+
+if user == computer:
+    print("It's a tie")
+elif (
+    (user == 'stone' and computer == 'paper') or
+    (user == 'paper' and computer == 'scissor') or
+    (user == 'scissor' and computer == 'stone')
+):
+    print("Computer wins")
+else:
+    print("You win")
