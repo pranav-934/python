@@ -1,0 +1,10 @@
+class Solution(object):
+    def isPalindrome(self,x):
+        xnum = str(x)
+        return xnum == xnum[::-1]
+
+if __name__ == "__main__":
+    solutions= Solution()
+    user_input = int(input("enter the number"))
+    result = solutions.isPalindrome(user_input)
+    print(result)
