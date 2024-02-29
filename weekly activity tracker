@@ -1,0 +1,14 @@
+print("Activity details of the week")
+a=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+b=[]
+d=[]
+for i in range(7):
+  
+    c=input(f"enter the date of {a[i]}")
+    b.append(c)
+    e=input(f"enter the activity of {a[i]}")
+    d.append(e)
+print("Your weekly activity report") 
+print("day          date        activity")   
+for i in range(7):
+    print(f"{a[i]}  {b[i]}   {c[i]}")
