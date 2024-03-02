@@ -1,0 +1,15 @@
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        words = s.split()
+        if words:
+            last_word = words[-1]
+            total_letters = len(last_word)
+            print(total_letters)
+            return total_letters
+
+solution_instance = Solution()
+input_string = "Hello World"
+length_of_last_word = solution_instance.lengthOfLastWord(input_string)
+
+    
+
