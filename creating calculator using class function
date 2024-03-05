@@ -1,0 +1,48 @@
+class Addition:
+    def add(self, x):
+        self.val = x + x + x
+
+class Subtraction:
+    def sub(self, x):
+        self.val = x - (x - 2)
+
+class Multiplication:
+    def mul(self, x):
+        self.val = x * x * x
+
+class Division:
+    def div(self, x):
+        b = x - 1
+        if b == 0:
+            print("x-1 cannot be zero")
+        else:
+            self.val = x / b
+
+while True:
+    print("Choose 1. Addition 2. Subtraction 3. Multiplication 4. Division")
+    y = int(input("Enter your choice (press 0 to exit): "))
+
+    if y == 0:
+        break  # Exit the loop if the user enters 0
+
+    x = int(input("Enter the value for calculation: "))
+
+    if y == 1:
+        z = Addition()
+        z.add(x)
+        print(z.val)
+    elif y == 2:
+        z = Subtraction()
+        z.sub(x)
+        print(z.val)
+    elif y == 3:
+        z = Multiplication()
+        z.mul(x)
+        print(z.val)
+    elif y == 4:
+        z = Division()
+        z.div(x)
+        print(z.val)
+    else:
+        print("Choose a number between 1 to 4")
+    continue
