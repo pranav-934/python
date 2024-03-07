@@ -1,0 +1,11 @@
+def candy(p1, p2, p3):
+    if p1 != 1 or p2 != 2 or p3 != 3:
+        return -1
+    else:
+        return max(p1, p2, p3)
+inputs = input("Enter three values separated by spaces: ")
+
+person1, person2, person3 = map(int, inputs.split())
+
+result = candy(person1, person2, person3)
+print(result)
