@@ -1,0 +1,15 @@
+list1 = []
+list2 = []
+
+list1in = input("Enter list1 separated by spaces: ")
+list2in = input("Enter list2 separated by spaces: ")
+
+list1in = list(map(int, list1in.split()))
+list2in = list(map(int, list2in.split()))
+
+list1.extend(list1in)
+list2.extend(list2in)
+
+combined_list = sorted(list1 + list2)
+
+print(combined_list)
