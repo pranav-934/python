@@ -11,20 +11,23 @@ print("name    number")
 for contact in contact_details:
    
     print(f"{contact['name']}:-{contact['number']}")
-    
-choice=input("do you want to add contacts")
-choice=choice.upper()
-if choice=='YES':
-    number_of_contacts1=int(input("enter the number of contacts you want to add:- "))
-    for k in range(number_of_contacts1):
-        contacts={}
-        contacts['name']=input(f"enter the name of new contact{i+1}")
-        contacts['number']=int(input(f"enter the new phno{i+1}"))
-        contact_details.append(contacts)
-    print("name  number")
-    for contact in contact_details:
+while True:
+    choice=input("do you want to add contacts")
+    choice=choice.upper()
+    if choice=='YES':
+        number_of_contacts1=int(input("enter the number of contacts you want to add:- "))
+        for k in range(number_of_contacts1):
+            contacts={}
+            contacts['name']=input(f"enter the name of new contact{i+1}")
+            contacts['number']=int(input(f"enter the new phno{i+1}"))
+            contact_details.append(contacts)
+        print("name  number")
+        for contact in contact_details:
         
-        print(f"{contact['name']}:-{contact['number']}")
+            print(f"{contact['name']}:-{contact['number']}")
     if choice=='NO':
-        exit(0)
+            break
+
+    
+    
     
