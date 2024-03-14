@@ -1,0 +1,15 @@
+def longest_palindrome(input):
+    longest = ""
+    for i in range(len(input)):
+        for j in range(i + 1, len(input) + 1):
+            substr = input[i:j]
+            if substr == substr[::-1] and len(substr) > len(longest):
+                if len(longest)+1 == 1:
+                    return "no palindrome found"
+                else:
+                    longest = substr
+    return longest if longest else "No palindrome found"
+
+input_str = input("Enter the coefficient: ")
+result = longest_palindrome(input_str)
+print("Longest palindrome is:", result)
