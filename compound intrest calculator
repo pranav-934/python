@@ -1,0 +1,7 @@
+a=int(input("enter the amount"))
+intr=float(input("enter the rate of intrest"))
+n=int(input("enter the number of year"))
+for i in range(n):
+    a=(a*intr)/100+a
+    print(i)
+    print(a)
